@@ -1,14 +1,22 @@
 <html>
   <head></head>
   <body>
-    <form action="/login" method="POST">
-  <div
+    <div
     class="cf-turnstile"
     data-sitekey="0x4AAAAAAB66Ic6YsolmiX6t"
   ></div>
+    <form action="" method="GET" target="_blank" id="form">
+      <input id="jump"/>
   <input type="submit" value="提交">
 </form>
+<script>
+  const input = document.getElementById('jump');
+  const forms = document.getElementById('form');
 
+  input.addEventListener('input', function(){
+    forms.setAttribute('action', input.value);
+  })
+</script>
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
   </body>
